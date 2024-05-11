@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-  import AppFooter from '../components/app/AppFooter.vue'
+  // import AppFooter from '../components/app/AppFooter.vue'
 
 </script>
 
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <AppFooter />
+  <!-- <AppFooter /> -->
 
 </template>
 

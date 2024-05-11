@@ -1,4 +1,7 @@
 <script setup lang='ts'>
+  import Button from 'primevue/button'
+  import { PagePaths } from '@/utils/pagePaths'
+
   import { ref, onMounted } from 'vue';
   import { useGameStore } from '@/store/gameStore'; // Import the store
   import data from '@/data/countify-pictures.json';
@@ -86,7 +89,7 @@
 
   function handleNextChallenge() {
     store.setCurrentImageIndex(currentImageIndex + 1);
-    router.push('/countify-game-on'); // Navigate to the new page
+    router.push(PagePaths.GAME_ON); // Navigate to the new page
 }
 </script>
 
@@ -145,10 +148,10 @@
 
   <!-- Bottom buttons -->
   <div class="bottom-buttons">
-    <router-link to="/countify-game-on">
+    <router-link :to=PagePaths.GAME_ON>
       <Button v-if="gameState >= 5" label="Next challenge" style="width: 12rem" @click="handleNextChallenge" />
     </router-link>
-    <router-link class="quit-button" to="/countify-play">
+    <router-link class="quit-button" :to=PagePaths.HOME>
       <Button label="Quit" text severity="secondary" size="small" />
     </router-link>
   </div>

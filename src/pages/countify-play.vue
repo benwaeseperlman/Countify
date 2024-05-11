@@ -33,7 +33,6 @@
         </div>
     </div>
   </div>
-  <AppFooter />
 </template>
 
 <style scoped>

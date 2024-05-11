@@ -21,7 +21,7 @@
   onMounted(() => {
     if (currentImageIndex.value < 0 || currentImageIndex.value >= data.allPictures.length) {
       store.setCurrentImageIndex(0);
-      router.push('/countify-play');
+      router.push(PagePaths.PLAY);
     } else {
       setupComponentState();
     }
@@ -147,7 +147,7 @@
   function handleGuess(guess: number) {
     store.setGuess(guess);
     store.setPoints(points.value);
-    router.push('/countify-game-results');
+    router.push(PagePaths.GAME_RESULTS);
 }
 </script>
 
